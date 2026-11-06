@@ -1,0 +1,30 @@
+# ── OS files ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editors / IDEs ──
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+
+# ── Logs ──
+*.log
+npm-debug.log*
+
+# ── Dependencies (in case a build step is added later) ──
+node_modules/
+
+# ── Environment / secrets ──
+.env
+.env.*
+
+# ── Build output ──
+dist/
+build/
+
+# ── Temp / backup files ──
+*.tmp
+*.bak
+*~
