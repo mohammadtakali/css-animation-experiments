@@ -1,0 +1,73 @@
+ section {
+     min-height: 100vh;
+     background-image: url(../images/night-sky-sharp-tall-3840x4320.jpg);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transform-style: preserve-3d;
+
+     >.sun {
+         width: 175px;
+         height: 175px;
+         border-radius: 50%;
+         background-image: url(../images/sun-220x220.jpg);
+         background-position: 50% 60%;
+         box-shadow: 0 0 200px 10px goldenrod;
+         transform: translateZ(285px);
+     }
+
+     >.orbit {
+         width: 570px;
+         height: 570px;
+         border-radius: 50%;
+         border: 1px solid rgba(255, 255, 255, 0.096);
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform-style: preserve-3d;
+         transform: translate3d(-50%, -50%, 285px) rotateX(87deg);
+
+         >.earth {
+             width: 105px;
+             height: 105px;
+             /* background-position: 40% 40%; */
+             border-radius: 50%;
+             background-color: rgba(0, 0, 255, 0);
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-337.5px, -50%);
+             transform-origin: 337.5px 50%;
+             animation: earth 80s linear infinite;
+             transform-style: preserve-3d;
+
+             >div {
+                 width: 105px;
+                 height: 105px;
+                 /* background-position: 40% 40%; */
+                 border-radius: 50%;
+                 background-image: url(../images/images\ \(1\).jpg);
+                 /* background-color:blue ; */
+                 background-size: auto 100%;
+                 /* background-repeat: no-repeat; */
+                 transform: rotateX(90deg);
+                 animation: padearth 80s linear infinite;
+                 box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.11);
+             }
+         }
+     }
+
+ }
+
+ @keyframes earth {
+     to {
+         transform: translate(-337.5px, -50%) rotate(360deg);
+     }
+ }
+
+ @keyframes padearth {
+     to {
+         transform: rotateX(90deg) rotateY(-360deg);
+         background-position: -2100px;
+     }
+ }
